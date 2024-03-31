@@ -1,6 +1,6 @@
 server:
   shutdown: graceful
-  port: 8080
+  port: 8004
 
 spring:
   lifecycle:
@@ -11,7 +11,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://admin:admin@133.186.210.43:8080/eureka/
+      defaultZone: http://admin:admin@133.186.210.43:8004/eureka/
   instance:
     prefer-ip-address: true
     hostname: 133.186.210.43
