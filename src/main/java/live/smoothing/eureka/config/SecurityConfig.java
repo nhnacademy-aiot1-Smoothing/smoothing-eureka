@@ -24,4 +24,17 @@ public class SecurityConfig {
         return http.build();
 
     }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        String encodedPassword = passwordEncoder().encode("admin");
+        manager.createUser(User.withUsername("admin").password(encodedPassword).roles("ADMIN").build());
+        return manager;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 }
