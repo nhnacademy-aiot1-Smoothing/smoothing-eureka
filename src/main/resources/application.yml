@@ -10,8 +10,5 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: http://admin:admin@133.186.210.43:8004/eureka/
   instance:
     prefer-ip-address: true
-    hostname: 133.186.210.43
