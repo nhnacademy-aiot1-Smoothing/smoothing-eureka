@@ -57,4 +57,4 @@ jobs:
           else
             echo "No containers with 'eureka' found."
           fi
-          sudo docker run -d —network=smoothing eureka name=eureka-service
+          sudo docker run -d —network=smoothing name=eureka-service eureka
